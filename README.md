@@ -1,4 +1,4 @@
-Run an experiment with an air cleaner and a particle meter. See the supplemental material at https://www.tandfonline.com/doi/full/10.1080/02786826.2022.2054674?scroll=top&needAccess=true for the experiment design. Roughly it's:
+Run an experiment with an air cleaner and a particle meter (these instructions are for PMS5003). See the supplemental material at https://www.tandfonline.com/doi/full/10.1080/02786826.2022.2054674?scroll=top&needAccess=true for the experiment design. Roughly it's:
 1. Get a room or an air chamber
 2. Fill it with a salt aerosol (100g salt / 1 L water put into a nebulizer) while running a mixing fan
 3. Shut the nebulizer off and let the mixing fan run for a while
