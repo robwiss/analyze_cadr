@@ -55,7 +55,7 @@ def run(csvfile, ACH_vd, V_r, csvout):
     CADR = V_r * ACH_f / 60 # units of ACH are 1/h, divide by 60 to convert to 1/minutes so CADR is in cubic feet per minute
     CADR_err = V_r * stderr / 60
     if csvout:
-        print('{:0.2f}, {:0.2f}, {}, {:0.2f}, {:0.2f}'.format(C_pt0, ACH, stderr, CADR, CADR_err))
+        print('{}, {:0.2f}, {:0.2f}, {}, {:0.2f}, {:0.2f}'.format(csvfile, C_pt0, ACH, stderr, CADR, CADR_err))
     else:
         print('C_pt0: {:0.2f}\nACH: {:0.2f}\nstderr (ACH): {:0.2f}\nCADR: {:0.2f} ±{:0.2f}'.format(C_pt0, ACH, stderr, CADR, CADR_err))
 
@@ -64,7 +64,7 @@ def main():
     parser.add_argument('ACH_vd', type=float, help='measured ACH due to deposition')
     parser.add_argument('V_r', type=float, help='Volume of room')
     parser.add_argument('csvfile', type=str, help='name of csv file to parse')
-    parser.add_argument('--csvout', action='store_true', help='output in form of CSV C_pt0, ACH, stderr, CADR, CADR_err')
+    parser.add_argument('--csvout', action='store_true', help='output in form of CSV: filename, C_pt0, ACH, stderr, CADR, CADR_err')
 
     args = parser.parse_args()
 

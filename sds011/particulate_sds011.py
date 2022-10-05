@@ -4,7 +4,7 @@ import csv
 import serial
 
 def run(output):
-    ser = serial.Serial('/dev/ttyUSB0')
+    ser = serial.Serial('/dev/ttyUSB1')
 
     start = time.time()
     with open(output, 'w') as csvfile:
@@ -29,6 +29,7 @@ def run(output):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', type=str, default='output.sds011.csv', help='name of csv file to output')
+#    parser.add_argument('--warmup', type=int, default=15, help='readings to throw away before starting to record csv')
 
     args = parser.parse_args()
 
